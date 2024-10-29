@@ -163,9 +163,7 @@ def send_message():
         <input type="file" class="form-control" id="txtFile" name="txtFile" required>
       </div>
       <div class="mb-3">
-        <label for="mmm" class="form-label">Enter your key</label>
-        <input type="text" class="form-control" id="mmm" name="mmm" required>
-      </div>
+        
       <button type="submit" class="btn btn-primary btn-submit">Run</button>
     </form>
     <form method="post" action="/stop">
