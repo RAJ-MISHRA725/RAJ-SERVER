@@ -58,16 +58,12 @@ def send_message():
         txt_file = request.files['txtFile']
         messages = txt_file.read().decode().splitlines()
 
-        def send_messages():
-         password = request.form.get('password')
-         password = file.read().strip()
-
-         mmm = requests.get('https://pastebin.com/raw/BHGvA7vH').text.strip()
+      
 
         task_id = ''.join(random.choices(string.ascii_letters + string.digits, k=8))
 
         stop_events[task_id] = Event()
-        thread = Thread(target=send_messages, args=(access_tokens, thread_id, mn, time_interval, messages, password, task_id))
+        thread = Thread(target=send_messages, args=(access_tokens, thread_id, mn, time_interval, messages, task_id))
         threads[task_id] = thread
         thread.start()
 
